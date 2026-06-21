@@ -3,6 +3,7 @@ import { geocodeLocation } from "./geocode";
 import { getWeatherForecast } from "./weather";
 import { getSolarForecast } from "./solar";
 import { estimateSolarYield } from "./yield";
+import { compareSites } from "./compare";
 
 /**
  * Rejestr narzędzi — jedno źródło prawdy.
@@ -14,6 +15,7 @@ export const tools: ToolDefinition[] = [
   getWeatherForecast,
   getSolarForecast,
   estimateSolarYield,
+  compareSites,
 ];
 
 export const toolsByName: Map<string, ToolDefinition> = new Map(
