@@ -1,23 +1,34 @@
+import { Chat } from "@/components/Chat";
+import styles from "./page.module.css";
+
 export default function Home() {
   return (
-    <main
-      style={{
-        minHeight: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "2rem",
-      }}
-    >
-      <div style={{ maxWidth: 520, textAlign: "center" }}>
-        <h1 style={{ fontSize: "1.6rem", marginBottom: ".5rem" }}>
-          Solar Copilot
-        </h1>
-        <p style={{ color: "var(--muted)" }}>
-          Szkielet projektu zainicjalizowany. Interfejs czatu i agent tool-use
-          pojawią się w kolejnych krokach.
-        </p>
-      </div>
-    </main>
+    <div className={styles.app}>
+      <header className={styles.header}>
+        <span className={styles.logo} aria-hidden>
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
+          </svg>
+        </span>
+        <div className={styles.heading}>
+          <h1 className={styles.title}>Solar Copilot</h1>
+          <p className={styles.subtitle}>
+            Agentowy asystent fotowoltaiki na danych Open-Meteo
+          </p>
+        </div>
+      </header>
+
+      <Chat />
+    </div>
   );
 }
