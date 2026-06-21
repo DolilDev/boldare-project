@@ -29,6 +29,21 @@ export default function Home() {
       </header>
 
       <Chat />
+
+      <footer className={styles.footer}>
+        Dane pogodowe i nasłonecznienia:{" "}
+        <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">
+          Open-Meteo.com
+        </a>{" "}
+        ·{" "}
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CC&nbsp;BY&nbsp;4.0
+        </a>
+      </footer>
     </div>
   );
 }
