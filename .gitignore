@@ -1,0 +1,36 @@
+# zależności
+/node_modules
+/.pnp
+.pnp.*
+
+# build Next.js
+/.next/
+/out/
+/build
+next-env.d.ts
+
+# build serwera MCP
+/mcp-server/dist/
+
+# zmienne środowiskowe (nigdy nie commitujemy sekretów)
+.env
+.env.*
+!.env.example
+
+# logi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# edytory / system
+.DS_Store
+*.pem
+.vscode/
+.idea/
+
+# typescript
+*.tsbuildinfo
+
+# vercel
+.vercel
