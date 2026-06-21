@@ -1,4 +1,5 @@
 import type { ChatMessage } from "./types";
+import { ToolCallCard } from "./ToolCallCard";
 import styles from "./Message.module.css";
 
 export function Message({ message }: { message: ChatMessage }) {
@@ -31,10 +32,7 @@ export function Message({ message }: { message: ChatMessage }) {
                 </p>
               ) : null
             ) : (
-              <div key={i} className={styles.toolMini}>
-                <span className={`${styles.dot} ${styles[part.status]}`} />
-                <code>{part.name}</code>
-              </div>
+              <ToolCallCard key={i} part={part} />
             ),
           )
         )}

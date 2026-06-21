@@ -55,51 +55,6 @@
   word-break: break-word;
 }
 
-/* Minimalny wskaźnik tool-calla (rozbudowany do karty w kolejnym kroku) */
-.toolMini {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  align-self: flex-start;
-  padding: 0.35rem 0.6rem;
-  background: var(--surface-muted);
-  border: 1px solid var(--border-strong);
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-family: var(--font-mono);
-  color: var(--text-soft);
-}
-
-.dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--muted);
-}
-
-.dot.running {
-  background: var(--accent);
-  animation: pulse 1s ease-in-out infinite;
-}
-
-.dot.done {
-  background: var(--ok);
-}
-
-.dot.error {
-  background: var(--danger);
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 0.35;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
 /* Wskaźnik „pisze" */
 .thinking {
   display: inline-flex;
