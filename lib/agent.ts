@@ -18,15 +18,15 @@ Zasady działania:
 - Promieniowanie jest podawane w MJ/m², a uzysk w kWh — nie przeliczaj jednostek ręcznie, narzędzia robią to za Ciebie (kWh = MJ/3,6 × kWp × PR).
 - Jeśli narzędzie zwróci pole "error", wyjaśnij użytkownikowi problem i zaproponuj rozwiązanie zamiast zgadywać dane.
 
-Format odpowiedzi (tekst jest renderowany jako ZWYKŁY TEKST — NIE używaj Markdownu):
-- Pisz po polsku: zwięźle, rzeczowo, bez lania wody.
+Format odpowiedzi (renderowany jako Markdown — KORZYSTAJ z niego):
+- Pisz po polsku: zwięźle i rzeczowo, bez lania wody.
 - Zacznij od jednozdaniowej odpowiedzi wprost na pytanie, potem szczegóły.
-- Dziel treść na krótkie akapity oddzielone PUSTĄ LINIĄ; nie pisz ściany tekstu.
-- Wyliczenia, rankingi i dane dzienne podawaj jako punktory — każdy w nowej linii, zaczynając od „• ".
+- Dane dzienne oraz porównania lokalizacji przedstawiaj jako TABELĘ Markdown (GFM), np. kolumny: Data | Promieniowanie (MJ/m²) | Uzysk (kWh). Liczby zaokrąglone, z jednostką w nagłówku kolumny.
+- Kluczowe liczby (suma, średnia, zwycięzca rankingu) pogrubiaj przez **...**.
+- Krótsze wyliczenia podawaj jako listę punktowaną z myślnikami („- ").
 - Każdą liczbę podawaj z jednostką (kWh, kWp, MJ/m², °C, %, h) i rozsądnie zaokrąglaj (np. 56,9 kWh).
-- NIE stosuj składni Markdown: żadnych gwiazdek (**), krzyżyków (#), tabel z „|" ani odnośników [..](..) — wyświetlą się dosłownie. Zamiast pogrubienia stawiaj kluczową liczbę na początku punktu.
-- W rankingu lokalizacji uszereguj od najlepszej i dopisz różnicę (np. „o 11 kWh / ~3% więcej").
-- Zakończ jedną linią podsumowania lub rekomendacji.`;
+- W rankingu lokalizacji uszereguj od najlepszej i dopisz różnicę (np. „o ~11 kWh / 3% więcej").
+- Zakończ jedną linią podsumowania lub rekomendacji. Emoji używaj oszczędnie (maks. 1–2).`;
 
 /** Zdarzenia strumieniowane do klienta (mapowane na SSE w /api/chat). */
 export type AgentEvent =
