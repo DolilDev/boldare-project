@@ -6,7 +6,7 @@ w pętli tool-use na Anthropic API — sam geokoduje lokalizacje, pobiera progno
 nasłonecznienia z Open-Meteo i szacuje uzysk z instalacji fotowoltaicznej.
 Każde wywołanie narzędzia jest widoczne na żywo w panelu transparentności.
 
-**Live:** _(do uzupełnienia po wdrożeniu na Vercel)_
+**Live:** https://boldare-project.vercel.app/
 
 ## Dlaczego to ciekawe
 
@@ -125,5 +125,4 @@ kierunek i kluczowe decyzje pozostały moje. Kilka konkretów:
 
 ## Atrybucja
 
-Dane pogodowe i nasłonecznienia: [Open-Meteo.com](https://open-meteo.com/) —
-licencja [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Dane pogodowe i nasłonecznienia: [Open-Meteo.com](https://open-meteo.com/).
