@@ -2,12 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { AgentEvent } from "@/lib/agent";
-import type {
-  AssistantPart,
-  ChatMessage,
-  TextPart,
-  ToolPart,
-} from "./types";
+import type { AssistantPart, ChatMessage, TextPart } from "./types";
 import { Message } from "./Message";
 import styles from "./Chat.module.css";
 
@@ -66,28 +61,10 @@ export function Chat() {
           break;
         }
         case "tool_use":
-          parts.push({
-            kind: "tool",
-            id: event.id,
-            name: event.name,
-            input: event.input,
-            status: "running",
-          });
+        case "tool_result":
+          // Wywołania narzędzi celowo nie są pokazywane w czacie —
+          // liczy się sama odpowiedź agenta.
           break;
-        case "tool_result": {
-          const idx = parts.findIndex(
-            (p) => p.kind === "tool" && p.id === event.id,
-          );
-          if (idx !== -1) {
-            const tp = parts[idx] as ToolPart;
-            parts[idx] = {
-              ...tp,
-              result: event.result,
-              status: event.isError ? "error" : "done",
-            };
-          }
-          break;
-        }
         case "error":
           parts.push({ kind: "text", text: `\n\n⚠️ ${event.message}` });
           break;
