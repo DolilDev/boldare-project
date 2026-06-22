@@ -6,7 +6,7 @@ w pętli tool-use na Anthropic API — sam geokoduje lokalizacje, pobiera progno
 nasłonecznienia z Open-Meteo i szacuje uzysk z instalacji fotowoltaicznej.
 Każde wywołanie narzędzia jest widoczne na żywo w panelu transparentności.
 
-**Live:** https://boldare-project.vercel.app/
+**Live:** https://solar-copilot-woad.vercel.app/
 
 ## Dlaczego to ciekawe
 
