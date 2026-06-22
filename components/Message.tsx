@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import type { ChatMessage } from "./types";
 import { ToolCallCard } from "./ToolCallCard";
 import styles from "./Message.module.css";
@@ -27,9 +29,11 @@ export function Message({ message }: { message: ChatMessage }) {
           message.parts.map((part, i) =>
             part.kind === "text" ? (
               part.text.trim().length > 0 ? (
-                <p key={i} className={styles.text}>
-                  {part.text}
-                </p>
+                <div key={i} className={styles.markdown}>
+                  <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {part.text}
+                  </ReactMarkdown>
+                </div>
               ) : null
             ) : (
               <ToolCallCard key={i} part={part} />
